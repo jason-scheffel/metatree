@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: metatree
+Upstream-Contact: Jason Scheffel <contact@jasonscheffel.com>
+Source: https://sr.ht/~jason-scheffel/metatree/
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "metatree"
+version = "ls"
+description = ""
+authors = ["Jason Scheffel <contact@jasonscheffel.com>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
