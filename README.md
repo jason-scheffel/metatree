@@ -85,12 +85,12 @@ for this program. Transitive dependencies or others are not listed. The
 `~/ort/output_docs` folder may have more information regarding additional
 dependencies.
 
-| Dependency     | Reason                                            |
-| -------------- | ------------------------------------------------- |
-| stat           | Get data about files                              |
-| exiftool       | Get data about files                              |
-| tar            | To archive all the scrapped metadata              |
-| alive-progress | Progress bar---scraping can take awhile sometimes |
+| Dependency     | Reason                                            | Level |
+| -------------- | ------------------------------------------------- | ----- |
+| stat           | Get data about files                              | Soft  |
+| exiftool       | Get data about files                              | Soft  |
+| tar            | To archive all the scrapped metadata              | Soft  |
+| alive-progress | Progress bar---scraping can take awhile sometimes | Soft  |
 
 <!-- ACKNOWLEDGEMENTS -->
 
