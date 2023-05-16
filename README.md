@@ -76,9 +76,7 @@ program.
 
 This section lists the dependencies for this program and a brief comment on why
 the dependency exists. Note, this section only lists the top-level dependencies
-for this program. Transitive dependencies or others are not listed. The
-`~/ort/output_docs` folder may have more information regarding additional
-dependencies.
+for this program. Transitive dependencies or others are not listed.
 
 | Dependency     | Reason                                             | Level |
 | -------------- | -------------------------------------------------- | ----- |
