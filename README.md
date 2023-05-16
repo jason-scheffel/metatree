@@ -52,26 +52,21 @@ software. It is not intended to be an actually "good" program.
 
 ## License
 
-This program is licensed under the following license(s):
+The main license for this program is:
 
 - [AGPL-3.0-or-later](https://spdx.org/licenses/AGPL-3.0-or-later.html)
+
+Some files, however, may be licensed under the following license(s):
+
 - [CC0-1.0](https://spdx.org/licenses/CC0-1.0.html)
 
 The following file is an spdx document, which includes the specific license(s)
 per file in this program:
 
-- `~/spdx.spdx`
+- `~/reuse.spdx`
 
-Furthermore, this program contains and uses dependencies. The specific
-dependencies and their corresponding licenses can be viewed in the following
-directory:
-
-- `~/ort/output_docs`
-
-Finally, the `~/LICENSES` directory includes the texts for the licenses used
-for this program; additionally, the `~/ort/output_docs/NOTICE_DEFAULT` file
-includes the texts for the licenses, along with other things, for the
-dependencies of this program.
+Finally, the `~/LICENSES` directory includes the licenses used for this
+program.
 
 <p align="right"><<a href="#TOP">back to top</a>></p>
 
