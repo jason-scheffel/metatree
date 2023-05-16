@@ -99,10 +99,7 @@ dependencies.
 The following are listed in alphabetical order with respect to the entities'
 name:
 
-The `~/ort/` directory and its contents were generated using
-[ORT](https://github.com/oss-review-toolkit/ort).
-
-The `~/LICENSES` directory and the `~/spdx.spdx` file were generated using
+The `~/LICENSES` directory and the `~/reuse.spdx` file were generated using
 [reuse-tool](https://github.com/fsfe/reuse-tool).
 
 <p align="right"><<a href="#TOP">back to top</a>></p>
