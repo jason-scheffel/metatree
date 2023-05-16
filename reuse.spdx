@@ -1,0 +1,44 @@
+SPDXVersion: SPDX-2.1
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: metatree
+DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-d04de971-bdfb-4f85-a05d-96685701d03c
+Creator: Person: Anonymous ()
+Creator: Organization: Anonymous ()
+Creator: Tool: reuse-1.0.0
+Created: 2023-05-16T20:44:18Z
+CreatorComment: <text>This document was created automatically using available reuse information consistent with REUSE.</text>
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-1d1cd510b9258e9e245df40c513fa902
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-c011619ae2009b5b2ec01041197e0365
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-894f4ceb221cf582cb686285b8854638
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-b3bea19219ca70e0caa7eba7f6ff7f4a
+
+FileName: ./README.md
+SPDXID: SPDXRef-1d1cd510b9258e9e245df40c513fa902
+FileChecksum: SHA1: af71a2f1dafa2675a71fef8e828fce0659e643de
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: AGPL-3.0-or-later
+FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
+SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
+
+FileName: ./metatree.py
+SPDXID: SPDXRef-c011619ae2009b5b2ec01041197e0365
+FileChecksum: SHA1: b52d6e97a207e4a2cfc9cbf9893c9094cc668105
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: AGPL-3.0-or-later
+FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
+SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
+
+FileName: ./poetry.lock
+SPDXID: SPDXRef-894f4ceb221cf582cb686285b8854638
+FileChecksum: SHA1: e8ec1366ffbf12bca011aec9324d7e740b307188
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: CC0-1.0
+FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
+
+FileName: ./pyproject.toml
+SPDXID: SPDXRef-b3bea19219ca70e0caa7eba7f6ff7f4a
+FileChecksum: SHA1: 112be4a9de4aeb15d98dbb3e69589e584654ad8f
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: CC0-1.0
+FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
