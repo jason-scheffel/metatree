@@ -41,12 +41,11 @@ software. It is not intended to be an actually "good" program.
 
 <!-- TABLE OF CONTENTS -->
 
-<summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#license">License</a></li>
-    <li><a href="#Dependencies">Dependencies</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
+## Table of Contents
+
+1. [License](#license)
+1. [Dependencies](#dependencies)
+1. [Acknowledgements](#acknowledgements)
 
 <!-- LICENSE -->
 
