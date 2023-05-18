@@ -24,6 +24,9 @@ from argparse import Namespace
 from alive_progress import alive_bar, config_handler
 from argopt import argopt
 
+# temp location, ill figure something out later
+config_handler.set_global(length=50, spinner="dots_reverse", bar="classic")
+
 
 def run_command(command: str) -> str:
     return os.popen(command).read()
