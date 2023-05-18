@@ -71,15 +71,15 @@ def recreate_dir(input_path: str, output_path: str) -> None:
 
     # get the amount of folders in the input directory
     # including the input directory itself too :)
-    num_folders = run_command(f"find {input_path} -type d -print | wc -l")
+    num_folders = int(run_command(f"find {input_path} -type d -print | wc -l"))
 
     # get the number of files in the input directory
-    num_files = run_command(f"find {input_path} -type f -print | wc -l")
+    num_files = int(run_command(f"find {input_path} -type f -print | wc -l"))
 
     # put the log file in the output Directory
     create_log_file(args, output_path, num_folders, num_files)
 
-    with alive_bar(int(num_folders), title="Folders") as folders_bar:
+    with alive_bar(num_folders, title="Folders") as folders_bar:
         # Iterate through the input directory
         for root, _, files in os.walk(input_path):
             # Recreate the directory structure in the output directory
@@ -99,7 +99,7 @@ def recreate_dir(input_path: str, output_path: str) -> None:
             # Update the progress bar for folders
             folders_bar()
 
-    with alive_bar(int(num_files), title="Files") as files_bar:
+    with alive_bar(num_files, title="Files") as files_bar:
         # Iterate through the files in the input directory
         for root, _, files in os.walk(input_path):
             for file in files:
