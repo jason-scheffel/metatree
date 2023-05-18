@@ -36,6 +36,35 @@ def get_time() -> str:
     return time.strftime("%Y-%m-%d-%Z %H:%M:%S", time.localtime())
 
 
+def create_log_file(
+    args: Namespace, save_path: str, dir_count: int, file_count: int
+) -> None:
+    log_file_name = f"metatree_log_{get_time()}.yml"
+    log_file_path = os.path.join(save_path, log_file_name)
+
+    with open(log_file_path, "w") as log_file:
+        log_file.write(f"Date: {get_time()}\n")
+
+        log_file.write("\n")
+
+        log_file.write(f"Input Directory: {args.input}\n")
+        log_file.write(f"Output Directory: {args.output}\n")
+        log_file.write(f"Log File: {log_file_path}\n")
+
+        log_file.write("\n")
+
+        log_file.write(f"Absolute number of Folders: {dir_count}\n")
+        log_file.write(f"Absolute number of Files: {file_count}\n")
+        log_file.write(f"Final number of Folders: {dir_count}\n")
+        log_file.write(f"Final number of Files: {file_count}\n")
+
+        log_file.write("\n")
+
+        log_file.write(f"Used arguments: {args}\n")
+
+        log_file.write("\n")
+
+
 def recreate_dir(input_path: str, output_path: str) -> None:
     if not os.path.exists(output_path):
         os.makedirs(output_path)
