@@ -26,6 +26,10 @@ from alive_progress import alive_bar
 from argopt import argopt
 
 
+def run_command(command: list[str]) -> str:
+    return subprocess.check_output(command).decode("utf-8")
+
+
 def get_time() -> str:
     return time.strftime("%Y-%m-%d-%Z %H:%M:%S", time.localtime())
 
