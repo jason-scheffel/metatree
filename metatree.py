@@ -19,13 +19,13 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import subprocess
 import time
-from typing import Any, Dict
+from argparse import Namespace
 
 from alive_progress import alive_bar
 from argopt import argopt
 
 
-def main(args: Dict[str, Any]) -> None:
+def main(args: Namespace) -> None:
     print(args)
 
 
@@ -68,6 +68,6 @@ if __name__ == "__main__":
     __version__ = "0.1.0"
     parser = argopt(docstring(), version=__version__)
     args = parser.parse_args()
-    main(args)  # type: ignore
+    main(args)
 
 #
