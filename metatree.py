@@ -21,7 +21,7 @@ import os
 import time
 from argparse import Namespace
 
-from alive_progress import alive_bar
+from alive_progress import alive_bar, config_handler
 from argopt import argopt
 
 
