@@ -61,6 +61,8 @@ The following are read-only mirrors where this program is located at:
 - <https://codeberg.org/jason-scheffel/metatree>
 - <https://github.com/jason-scheffel/metatree>
 
+<a href="#TOP">back to top</a>
+
 <!-- LICENSE -->
 
 ## License
@@ -81,7 +83,7 @@ per file in this program:
 Finally, the `~/LICENSES` directory includes the licenses used for this
 program.
 
-<p align="right"><<a href="#TOP">back to top</a>></p>
+<a href="#TOP">back to top</a>
 
 <!--Dependencies-->
 
@@ -121,6 +123,8 @@ program and where to view a copy of the relevant license(s), then:
 - You may also view the aforementioned files and directories at
   <https://sr.ht/~jason-scheffel/metatree/>.
 
+<a href="#TOP">back to top</a>
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
@@ -131,6 +135,6 @@ name:
 The `~/LICENSES` directory and the `~/reuse.spdx` file were generated using
 [reuse-tool](https://github.com/fsfe/reuse-tool).
 
-<p align="right"><<a href="#TOP">back to top</a>></p>
+<a href="#TOP">back to top</a>
 
 <!-- blank -->
