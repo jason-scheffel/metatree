@@ -2,59 +2,47 @@ SPDXVersion: SPDX-2.1
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: metatree
-DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-e91c54d2-054e-4a61-b729-0f6fad4323b9
+DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-c982a54b-aece-4422-8cb1-c8e62fa41e14
 Creator: Person: Anonymous ()
 Creator: Organization: Anonymous ()
 Creator: Tool: reuse-1.0.0
-Created: 2023-05-17T22:20:32Z
+Created: 2023-05-18T01:07:03Z
 CreatorComment: <text>This document was created automatically using available reuse information consistent with REUSE.</text>
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-2082c82450514338e876d3e94acc8b91
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-fed730b690417ef467d6d776eca00e52
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-12603c78cd845c13c7cb2514390a6757
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-93ffc5fef2ce123f6c66f2fb395b6f7c
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-b6da83c058a1440c0f6f3e4f580b8bb4
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-51f2359e3befe05576f8a8d2f8d34b78
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-eb1564febdc4a6adb9c570dff4a9a406
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-b20c8c9a08044998c3302e26ef86158b
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-c011619ae2009b5b2ec01041197e0365
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-6739a0eccb17ab8c84d1424a00c7fb91
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-c3df55ea73d681e6fe758b40ff562f6e
 
-FileName: ./LICENSE-OTHER/Artistic-1.0-Perl.txt
-SPDXID: SPDXRef-2082c82450514338e876d3e94acc8b91
-FileChecksum: SHA1: deda4e5e93ca111fae3521dd01f16c44707997c1
+FileName: ./.IGNORE_THIS_FILE_REUSE_LICENSE_CHEAT.txt
+SPDXID: SPDXRef-51f2359e3befe05576f8a8d2f8d34b78
+FileChecksum: SHA1: 484cfdf99db008b5b495415568f200b4be042da2
 LicenseConcluded: NOASSERTION
-FileCopyrightText: <text>Copyright Holder as specified below.
-Copyright Holder maintains some semblance of artistic control over the development of the package, while giving the users of the package the right to use and distribute the Package in a more-or-less customary fashion, plus the right to make reasonable modifications.
-Copyright Holder to include your modifications in the Standard Version of the Package.
-Copyright Holder" is whoever is named in the copyright or copyrights for the package.
-Copyright Holder, and derivatives of that collection of files created through textual modification.
-Copyright Holder, but only to the computing community at large as a market that must bear the fee.)
-Copyright Holder.
-Copyright Holder.  A Package modified in such a way shall still be considered the Standard Version.</text>
-
-FileName: ./LICENSE-OTHER/GPL-3.0-or-later.txt
-SPDXID: SPDXRef-fed730b690417ef467d6d776eca00e52
-FileChecksum: SHA1: e3bdbf20d43fc066a1b40a64d57d4ae5a31f177f
-LicenseConcluded: NOASSERTION
-FileCopyrightText: <text>Copyright © 2007 Free Software Foundation, Inc. <http://fsf.org/></text>
-
-FileName: ./LICENSE-OTHER/MIT.txt
-SPDXID: SPDXRef-12603c78cd845c13c7cb2514390a6757
-FileChecksum: SHA1: adadb67a9875aeeac285309f1eab6e47d9ee08a7
-LicenseConcluded: NOASSERTION
-FileCopyrightText: <text>Copyright (c) <year> <copyright holders></text>
-
-FileName: ./LICENSE-OTHER/MPL-2.0.txt
-SPDXID: SPDXRef-93ffc5fef2ce123f6c66f2fb395b6f7c
-FileChecksum: SHA1: 8fcc05c0dd9d9c76e948120c9520e4cbe85fb527
-LicenseConcluded: NOASSERTION
-FileCopyrightText: NONE
+LicenseInfoInFile: 0BSD
+LicenseInfoInFile: Artistic-1.0-Perl
+LicenseInfoInFile: CC0-1.0
+LicenseInfoInFile: GPL-1.0-or-later
+LicenseInfoInFile: GPL-3.0-or-later
+LicenseInfoInFile: MIT
+LicenseInfoInFile: MPL-2.0
+LicenseInfoInFile: PSF-2.0
+FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./README.md
-SPDXID: SPDXRef-b6da83c058a1440c0f6f3e4f580b8bb4
-FileChecksum: SHA1: 13f709b3296f889d06eb75e84867a4c4a9decb08
+SPDXID: SPDXRef-eb1564febdc4a6adb9c570dff4a9a406
+FileChecksum: SHA1: 0631498fa47f586ecc83a33e088b7a5ba5c2333b
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
 SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
+
+FileName: ./depend-info.txt
+SPDXID: SPDXRef-b20c8c9a08044998c3302e26ef86158b
+FileChecksum: SHA1: 9cd5cce8c79a959b9de6b26154a12c2849a483fb
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: CC0-1.0
+FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./metatree.py
 SPDXID: SPDXRef-c011619ae2009b5b2ec01041197e0365
