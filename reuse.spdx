@@ -2,16 +2,17 @@ SPDXVersion: SPDX-2.1
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: metatree
-DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-a27a2544-5dd4-40e5-8fb7-7d3546849c19
+DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-db6c5f4b-9077-4cbe-86ec-4cfa2031b2e9
 Creator: Person: Anonymous ()
 Creator: Organization: Anonymous ()
 Creator: Tool: reuse-1.0.0
-Created: 2023-05-18T16:45:14Z
+Created: 2023-05-18T19:58:35Z
 CreatorComment: <text>This document was created automatically using available reuse information consistent with REUSE.</text>
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-51f2359e3befe05576f8a8d2f8d34b78
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-513206cae7b76065eb6e9760452381b6
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-bb8b7da611d3fd00a3b89c397c4095c1
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-b20c8c9a08044998c3302e26ef86158b
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-d05c412e38813e788a47fec9a79a0dbe
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-088e1a22fa95f68b522dd6aed3898127
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-6739a0eccb17ab8c84d1424a00c7fb91
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-c3df55ea73d681e6fe758b40ff562f6e
 
@@ -27,6 +28,13 @@ LicenseInfoInFile: GPL-3.0-or-later
 LicenseInfoInFile: MIT
 LicenseInfoInFile: MPL-2.0
 LicenseInfoInFile: PSF-2.0
+FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
+
+FileName: ./.gitignore
+SPDXID: SPDXRef-513206cae7b76065eb6e9760452381b6
+FileChecksum: SHA1: 7c939065766a604c4ef7831775413fa329dbae86
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./README.md
@@ -45,8 +53,8 @@ LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./metatree.py
-SPDXID: SPDXRef-d05c412e38813e788a47fec9a79a0dbe
-FileChecksum: SHA1: 9b2373c1fd642f416ad33220d44281cf4f91ab21
+SPDXID: SPDXRef-088e1a22fa95f68b522dd6aed3898127
+FileChecksum: SHA1: 2bf59190299341a8341f766ef4474e1a8ee4a855
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
