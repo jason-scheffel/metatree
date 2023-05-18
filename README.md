@@ -43,9 +43,23 @@ software. It is not intended to be an actually "good" program.
 
 ## Table of Contents
 
+1. [Notice](#notice)
 1. [License](#license)
 1. [Dependencies](#dependencies)
 1. [Acknowledgements](#acknowledgements)
+
+<!-- NOTICE-->
+
+## Notice
+
+Developement on this program is done at
+<https://git.sr.ht/~jason-scheffel/metatree>.
+
+The following are read-only mirrors where this program is located at:
+
+- <https://gitlab.com/jason-scheffel/metatree>
+- <https://codeberg.org/jason-scheffel/metatree>
+- <https://github.com/jason-scheffel/metatree>
 
 <!-- LICENSE -->
 
