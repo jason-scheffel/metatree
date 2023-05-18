@@ -65,7 +65,7 @@ def create_log_file(
         log_file.write("#")
 
 
-def recreate_dir(input_path: str, output_path: str) -> None:
+def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
@@ -114,7 +114,7 @@ def recreate_dir(input_path: str, output_path: str) -> None:
 
 
 def main(args: Namespace) -> None:
-    recreate_dir(args.input, args.output)
+    recreate_dir(args, args.input, args.output)
 
 
 def docstring() -> str:
