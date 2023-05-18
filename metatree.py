@@ -62,7 +62,7 @@ def create_log_file(
 
         log_file.write(f"Used arguments: {args}\n")
 
-        log_file.write("\n")
+        log_file.write("#")
 
 
 def recreate_dir(input_path: str, output_path: str) -> None:
