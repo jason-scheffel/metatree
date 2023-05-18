@@ -29,6 +29,9 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 
 <!-- PROJECT LOGO -->
 
+If this message is here, then that means this program probably does not work
+right now.
+
 <h3 align="center">
 metatree
 </h3>
