@@ -18,7 +18,6 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
-import subprocess
 import time
 from argparse import Namespace
 
