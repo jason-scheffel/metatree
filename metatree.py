@@ -26,8 +26,8 @@ from alive_progress import alive_bar
 from argopt import argopt
 
 
-def run_command(command: list[str]) -> str:
-    return subprocess.check_output(command).decode("utf-8")
+def run_command(command: str) -> str:
+    return os.popen(command).read()
 
 
 def get_time() -> str:
@@ -37,6 +37,13 @@ def get_time() -> str:
 def recreate_dir(input_path: str, output_path: str) -> None:
     if not os.path.exists(output_path):
         os.makedirs(output_path)
+
+    # get the amount of folders in the input directory
+    # including the input directory itself too :)
+    num_folders = run_command(f"find {input_path} -type d -print | wc -l")
+
+    # get the number of files in the input directory
+    num_files = run_command(f"find {input_path} -type f -print | wc -l")
 
     # Iterate through the input directory
     for root, _, files in os.walk(input_path):
