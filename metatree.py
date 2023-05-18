@@ -155,7 +155,7 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 if __name__ == "__main__":
     __version__ = "0.1.0"
     parser = argopt(docstring(), version=__version__)
-    args = parser.parse_args()
-    main(args)
+    arguments = parser.parse_args()
+    main(arguments)
 
 #
