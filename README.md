@@ -78,7 +78,7 @@ This program requires, or optionally 'requires' the following software:
 <center>
 
 | Software           | License                               | Type                      |
-| :----------------- | :------------------------------------ | ------------------------- |
+| :----------------- | :------------------------------------ | :------------------------ |
 | stat\*             | GPL-3.0-or-later                      | Program                   |
 | exiftool\*         | GPL-1.0-or-later OR Artistic-1.0-Perl | Program                   |
 | tar\*              | GPL-3.0-or-later                      | Program                   |
