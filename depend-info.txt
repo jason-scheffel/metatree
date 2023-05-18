@@ -1,0 +1,34 @@
+SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com>
+SPDX-License-Identifier: CC0-1.0
+
+stat:
+  SOURCE CODE = https://github.com/coreutils/coreutils/blob/master/src/stat.c
+  LICENSE = https://spdx.org/licenses/GPL-3.0-or-later.html
+
+exiftool:
+  SOURCE CODE = https://github.com/exiftool/exiftool
+  LICENSE = https://spdx.org/licenses/Artistic-1.0-Perl.html OR https://spdx.org/licenses/GPL-1.0-or-later.html
+
+tar:
+  SOURCE CODE = https://git.savannah.gnu.org/cgit/tar.github
+  LICENSE = https://spdx.org/licenses/GPL-3.0-or-later.html
+
+Python:
+  SOURCE CODE = https://github.com/python/cpython
+  LICENSE = https://github.com/python/cpython/blob/main/LICENSE
+
+alive-progress:
+  SOURCE CODE = https://github.com/rsalmei/alive-progress
+  LICENSE = https://spdx.org/licenses/MIT.html
+
+argopt:
+  SOURCE CODE = https://github.com/casperdcl/argopt
+  LICENSE = https://spdx.org/licenses/MPL-2.0.html
+
+about-time:
+  SOURCE CODE = https://github.com/rsalmei/about-time
+  LICENSE = https://spdx.org/licenses/MIT.html
+
+grapheme:
+  SOURCE CODE = https://github.com/alvinlindstam/grapheme
+  LICENSE = https://spdx.org/licenses/MIT.html

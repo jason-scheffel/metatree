@@ -29,6 +29,21 @@ about-time = "4.2.1"
 grapheme = "0.6.0"
 
 [[package]]
+name = "argopt"
+version = "0.8.2"
+description = "doc to argparse driven by docopt"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "argopt-0.8.2-py3-none-any.whl", hash = "sha256:c613eac7f0712760340f0b67cd5ef4b7537319f92ad5ce48a83c9132d249f8a1"},
+    {file = "argopt-0.8.2.tar.gz", hash = "sha256:fabdb99043a82a320e0c257719f59a677404640dce97b079d2dac9b6b581aeec"},
+]
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+
+[[package]]
 name = "grapheme"
 version = "0.6.0"
 description = "Unicode grapheme helpers"
@@ -45,4 +60,4 @@ test = ["pytest", "sphinx", "sphinx-autobuild", "twine", "wheel"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d8406e083ef80c11953f402f00d24ecbe6d43a999f0c4a8cfea19cf036572e23"
+content-hash = "2de2dfa9ca71f46e7e3e38d567e17956c798ec94f813b7991905ec3d0c8d7788"

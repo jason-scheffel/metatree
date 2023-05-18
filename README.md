@@ -74,16 +74,39 @@ program.
 
 ## Dependencies
 
-This section lists the dependencies for this program and a brief comment on why
-the dependency exists. Note, this section only lists the top-level dependencies
-for this program. Transitive dependencies or others are not listed.
+This program requires, or optionally 'requires' the following software:
 
-| Dependency     | Reason                                             | Level |
-| -------------- | -------------------------------------------------- | ----- |
-| stat           | Get data about files                               | Soft  |
-| exiftool       | Get data about files                               | Soft  |
-| tar            | To archive all the scrapped metadata               | Soft  |
-| alive-progress | Progress bar---scraping can take a while sometimes | Soft  |
+<center>
+
+| Software           | License                               | Type                      |
+| :----------------- | :------------------------------------ | ------------------------- |
+| stat\*             | GPL-3.0-or-later                      | Program                   |
+| exiftool\*         | GPL-1.0-or-later OR Artistic-1.0-Perl | Program                   |
+| tar\*              | GPL-3.0-or-later                      | Program                   |
+| Python\*           | 0BSD AND PSF-2.0                      | Program                   |
+| alive-progress\*\* | MIT                                   | Python Package            |
+| argopt\*\*         | MPL-2.0                               | Python Package            |
+| about-time\*\*\*   | MIT                                   | Python Transitive Package |
+| grapheme\*\*\*     | MIT                                   | Python Transitive Package |
+
+</center>
+
+```
+* denotes a system program
+
+** denotes a Python package
+
+*** denotes a Python transitive package
+```
+
+If you would like a list that includes where to view the source code of each
+program and where to view a copy of the relevant license(s), then:
+
+- A link to the source code pertaining to each software can be viewed in the
+  `~/depend-info.txt` file.
+- The license text files can be viewed in the `~/LICENSES` directory.
+- You may also view the aforementioned files and directories at
+  <https://sr.ht/~jason-scheffel/metatree/>.
 
 <!-- ACKNOWLEDGEMENTS -->
 

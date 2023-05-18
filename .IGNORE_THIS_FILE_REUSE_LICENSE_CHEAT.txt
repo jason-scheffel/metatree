@@ -1,0 +1,28 @@
+SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com>
+SPDX-License-Identifier: CC0-1.0
+
+PLEASE IGNORE THIS FILE.
+
+The purpose of this file was because <https://reuse.software/> software fails
+to pass if there are licenses in the LICENSES directory that are not used in the
+program.
+
+Such licenses are most likely the ones used in things like the dependencies
+for this program.
+
+This file lists such licenses as to trick it.
+
+Therefore, this file should not be used for anything other than that.
+
+To clarrify, ignore this file completely, if you are looking for the license
+of this file, refer to the top of this file.
+
+SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com>
+SPDX-License-Identifier: 0BSD
+SPDX-License-Identifier: Artistic-1.0-Perl
+SPDX-License-Identifier: GPL-1.0-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
+SPDX-License-Identifier: MIT
+SPDX-License-Identifier: MIT
+SPDX-License-Identifier: MPL-2.0
+SPDX-License-Identifier: PSF-2.0
