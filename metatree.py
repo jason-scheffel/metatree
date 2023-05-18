@@ -25,7 +25,7 @@ from alive_progress import alive_bar, config_handler
 from argopt import argopt
 
 # temp location, ill figure something out later
-config_handler.set_global(length=50, spinner="dots_reverse", bar="classic")
+config_handler.set_global(length=79, spinner="classic", bar="classic")
 
 
 def run_command(command: str) -> str:
@@ -47,29 +47,38 @@ def recreate_dir(input_path: str, output_path: str) -> None:
     # get the number of files in the input directory
     num_files = run_command(f"find {input_path} -type f -print | wc -l")
 
-    # Iterate through the input directory
-    for root, _, files in os.walk(input_path):
-        # Recreate the directory structure in the output directory
-        relative_path = os.path.relpath(root, input_path)
-        output_dir = os.path.join(output_path, relative_path)
+    with alive_bar(int(num_folders), title="Folders") as folders_bar:
+        # Iterate through the input directory
+        for root, _, files in os.walk(input_path):
+            # Recreate the directory structure in the output directory
+            relative_path = os.path.relpath(root, input_path)
+            output_dir = os.path.join(output_path, relative_path)
 
-        # Not sure if this is necessary
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+            # Not sure if this is necessary
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
 
-        # Create a .yml file with the parent directory's name
-        parent_dir_name = os.path.basename(root)
-        parent_yml_file = f"PARENT_{parent_dir_name}.yml"
-        parent_yml_path = os.path.join(output_dir, parent_yml_file)
-        open(parent_yml_path, "w").close()
+            # Create a .yml file with the parent directory's name
+            parent_dir_name = os.path.basename(root)
+            parent_yml_file = f"PARENT_{parent_dir_name}.yml"
+            parent_yml_path = os.path.join(output_dir, parent_yml_file)
+            open(parent_yml_path, "w").close()
 
+            # Update the progress bar for folders
+            folders_bar()
+
+    with alive_bar(int(num_files), title="Files") as files_bar:
         # Iterate through the files in the input directory
-        for file in files:
-            # Add .yml to the end of the file names
-            # and create empty files in the output directory
-            new_file_name = f"{file}.yml"
-            new_file_path = os.path.join(output_dir, new_file_name)
-            open(new_file_path, "w").close()
+        for root, _, files in os.walk(input_path):
+            for file in files:
+                # Add .yml to the end of the file names
+                # and create empty files in the output directory
+                new_file_name = f"{file}.yml"
+                new_file_path = os.path.join(output_dir, new_file_name)
+                open(new_file_path, "w").close()
+
+                # Update the progress bar for files
+                files_bar()
 
 
 def main(args: Namespace) -> None:
