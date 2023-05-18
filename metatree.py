@@ -25,6 +25,10 @@ from alive_progress import alive_bar
 from argopt import argopt
 
 
+def get_time() -> str:
+    return time.strftime("%Y-%m-%d-%Z %H:%M:%S", time.localtime())
+
+
 def main(args: Namespace) -> None:
     print(args)
 
