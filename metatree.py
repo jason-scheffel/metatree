@@ -227,10 +227,13 @@ def get_file_info(file_name: str, exiftool: bool) -> dict:
     }
 
 
-def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
+def recreate_dir(args: Namespace) -> None:
     """
     Recreate the directory structure of the input directory in the output dir.
     """
+    input_path = args.input
+    output_path = args.output
+
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
@@ -299,7 +302,7 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
 
 
 def main(args: Namespace) -> None:
-    recreate_dir(args, args.input, args.output)
+    recreate_dir(args)
 
 
 def docstring() -> str:
