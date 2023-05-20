@@ -305,6 +305,14 @@ def main(args: Namespace) -> None:
     recreate_dir(args)
 
 
+def check_args(args: Namespace) -> None:
+    pass
+
+
+def tar_dir(args: Namespace) -> None:
+    pass
+
+
 def docstring() -> str:
     return """Hello
 
