@@ -30,6 +30,9 @@ config_handler.set_global(length=79, spinner="classic", bar="classic")
 
 
 def run_command(cmd: list[str]) -> dict[str, str | int]:
+    """
+    Run a command the return the stdout, stderr, and returncode.
+    """
     cmd_out = subprocess.run(
         cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
     )
@@ -42,12 +45,23 @@ def run_command(cmd: list[str]) -> dict[str, str | int]:
 
 
 def get_time() -> str:
+    """
+    Get the current time in the specified format and return it.
+    """
     return time.strftime("%Y-%m-%d-%Z %H:%M:%S", time.localtime())
 
 
 def create_log_file(
     args: Namespace, save_path: str, dir_count: int, file_count: int
 ) -> None:
+    """
+    Create the log file for the program.
+
+    Contains information regarding stats about the directory to be scraped like
+    how many folders are in it.
+
+    Also contains information about the arguments used to run the program.
+    """
     log_file_name = f"metatree_log_{get_time()}.yml"
     log_file_path = os.path.join(save_path, log_file_name)
 
@@ -75,6 +89,9 @@ def create_log_file(
 
 
 def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
+    """
+    Recreate the directory structure of the input directory in the output dir.
+    """
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
