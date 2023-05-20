@@ -16,7 +16,7 @@ PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 """
-
+import json
 import os
 import subprocess
 import time
@@ -271,11 +271,15 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
 
-            # Create a .yml file with the parent directory's name
+            # Create a .json file with the parent directory's name
             parent_dir_name = os.path.basename(root)
-            parent_yml_file = f"PARENT_{parent_dir_name}.yml"
-            parent_yml_path = os.path.join(output_dir, parent_yml_file)
-            open(parent_yml_path, "w").close()
+            parent_json_file = f"PARENT_{parent_dir_name}.json"
+            parent_json_path = os.path.join(output_dir, parent_json_file)
+
+            # Put data in the .yml file
+            with open(parent_json_path, "w") as f:
+                folder_data = get_file_info(parent_json_path)
+                json.dump(folder_data, f, indent=4)
 
             # Update the progress bar for folders
             folders_bar()
@@ -284,9 +288,9 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
         # Iterate through the files in the input directory
         for root, _, files in os.walk(input_path):
             for file in files:
-                # Add .yml to the end of the file names
+                # Add .json to the end of the file names
                 # and create empty files in the output directory
-                new_file_name = f"{file}.yml"
+                new_file_name = f"{file}.json"
                 new_file_path = os.path.join(
                     output_dir, new_file_name  # type: ignore
                 )
