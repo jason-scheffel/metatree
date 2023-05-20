@@ -294,7 +294,11 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
                 new_file_path = os.path.join(
                     output_dir, new_file_name  # type: ignore
                 )
-                open(new_file_path, "w").close()
+
+                # Put data in the .json file
+                with open(new_file_path, "w") as f:
+                    file_data = get_file_info(new_file_path)
+                    json.dump(file_data, f, indent=4)
 
                 # Update the progress bar for files
                 files_bar()
