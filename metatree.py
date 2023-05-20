@@ -221,9 +221,15 @@ def get_file_info(file_name: str) -> dict:
 
         return {"exiftool_hi": exiftool}
 
+    def _get_other():
+        return {
+            "Scrap Time": get_time(),
+        }
+
     return {
         "stat": _get_stat(),
         "exiftool": _get_exiftool(),
+        "other": _get_other(),
     }
 
 
