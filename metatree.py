@@ -260,38 +260,42 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
     # put the log file in the output Directory
     create_log_file(args, output_path, num_folders, num_files)
 
-    # Iterate through the input directory
-    for root, dirs, files in os.walk(input_path):
-        # Recreate the directory structure in the output directory
-        relative_path = os.path.relpath(root, input_path)
-        output_dir = os.path.join(output_path, relative_path)
+    with alive_bar(num_folders, title="Dirs") as bar_folders:
+        with alive_bar(num_files, title="Files") as bar_files:
+            # Iterate through the input directory
+            for root, dirs, files in os.walk(input_path):
+                # Recreate the directory structure in the output directory
+                relative_path = os.path.relpath(root, input_path)
+                output_dir = os.path.join(output_path, relative_path)
 
-        # Not sure if this is necessary
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+                # Not sure if this is necessary
+                if not os.path.exists(output_dir):
+                    os.makedirs(output_dir)
 
-        # Create a .json file with the parent directory's name
-        parent_dir_name = os.path.basename(root)
-        parent_json_file = f"PARENT_{parent_dir_name}.json"
-        parent_json_path = os.path.join(output_dir, parent_json_file)
+                # Create a .json file with the parent directory's name
+                parent_dir_name = os.path.basename(root)
+                parent_json_file = f"PARENT_{parent_dir_name}.json"
+                parent_json_path = os.path.join(output_dir, parent_json_file)
 
-        # Put data in the .json file
-        with open(parent_json_path, "w") as f:
-            folder_data = get_file_info(root, False)
-            json.dump(folder_data, f, indent=4)
+                # Put data in the .json file
+                with open(parent_json_path, "w") as f:
+                    folder_data = get_file_info(root, False)
+                    json.dump(folder_data, f, indent=4)
+                bar_folders()
 
-        # Iterate through the files in the input directory
-        for file_name in files:
-            # Create a .json file with the file's name
-            file_json_file = f"{file_name}.json"
-            file_json_path = os.path.join(output_dir, file_json_file)
+                # Iterate through the files in the input directory
+                for file_name in files:
+                    # Create a .json file with the file's name
+                    file_json_file = f"{file_name}.json"
+                    file_json_path = os.path.join(output_dir, file_json_file)
 
-            file_path = os.path.join(root, file_name)
+                    file_path = os.path.join(root, file_name)
 
-            # Put data in the .json file
-            with open(file_json_path, "w") as f:
-                file_data = get_file_info(file_path, True)
-                json.dump(file_data, f, indent=4)
+                    # Put data in the .json file
+                    with open(file_json_path, "w") as f:
+                        file_data = get_file_info(file_path, True)
+                        json.dump(file_data, f, indent=4)
+                    bar_files()
 
 
 def main(args: Namespace) -> None:
