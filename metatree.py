@@ -257,10 +257,6 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
     num_folders = _count_dirs()
     num_files = _count_files()
 
-    # ignore type because we know it will be an int.
-    num_folders = int(num_folders)  # type: ignore
-    num_files = int(num_files)  # type: ignore
-
     # put the log file in the output Directory
     create_log_file(args, output_path, num_folders, num_files)
 
