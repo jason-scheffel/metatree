@@ -88,6 +88,31 @@ def create_log_file(
         log_file.write("#")
 
 
+def get_file_info(args: Namespace, file_name: str) -> dict:
+    """
+    Defining a file as a file or directory.
+
+    Returns a dictionary containing information regarding the file.
+
+    The key is what program is used to get the information and the value
+    is the actual information.
+    """
+
+    def _get_stat():
+        """
+        Get the information from the stat command.
+        """
+        pass
+
+    def _get_exiftool():
+        """
+        Get the information from the exiftool command.
+        """
+        pass
+
+    return {}
+
+
 def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
     """
     Recreate the directory structure of the input directory in the output dir.
