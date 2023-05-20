@@ -102,6 +102,7 @@ def get_file_info(file_name: str) -> dict:
         """
         Get the information from the stat command.
         """
+        SEP = "{/~/}"
         format_options_file = {
             "%a": "permission bits in octal (note '#' and '0' printf flags)",
             "%A": "permission bits and file type in human readable form",
@@ -159,7 +160,7 @@ def get_file_info(file_name: str) -> dict:
             "stat",
             file_name,
             "--format",
-            " ".join(format_options_file.keys()),
+            SEP.join(format_options_file.keys()),
         ]
 
         cmd_fs = [
@@ -167,22 +168,58 @@ def get_file_info(file_name: str) -> dict:
             file_name,
             "--file-system",
             "--format",
-            " ".join(format_options_fs.keys()),
+            SEP.join(format_options_fs.keys()),
         ]
 
-        return {
-            "stat_file": run_command(cmd_file),
-            "stat_fs": run_command(cmd_fs),
-        }
+        # creates two dicts, new_stat_file and new_stat_fs.
+        # The keys should be the description of the information
+        # and the value should be the actual information
+
+        # get the output of the stat command
+        output_file = run_command(cmd_file).get("stdout")
+        output_fs = run_command(cmd_fs).get("stdout")
+
+        # split the output of the stat command
+        output_file = output_file.split(SEP)  # type: ignore
+        output_fs = output_fs.split(SEP)  # type: ignore
+
+        # create a dict with the keys being the description of the information
+        # and the value being the actual information
+        new_stat_file = {}
+        for key, value in zip(format_options_file.values(), output_file):
+            new_stat_file[key] = value
+
+        new_stat_fs = {}
+        for key, value in zip(format_options_fs.values(), output_fs):
+            new_stat_fs[key] = value
+
+        return {"file": new_stat_file, "fs": new_stat_fs}
 
     def _get_exiftool():
-        """
-        Get the information from the exiftool command.
-        """
         cmd = ["exiftool", file_name]
-        return {
-            "exiftool": run_command(cmd),
-        }
+        output = run_command(cmd).get("stdout")
+
+        """
+        exiftool output looks like this:
+        ExifTool Version Number         : 12.16
+        File Name                       : IMG_20210101_000000.jpg
+        ...
+
+        We want to create a dict with the keys being the first part of the line
+        """
+
+        # split the output of the exiftool command
+        output = output.split("\n")  # type: ignore
+
+        # create a dict with the keys being the first part of the line
+        # and the value being the rest of the line
+        exiftool = {}
+        for line in output:
+            if line:
+                key, value = line.split(":", 1)
+                exiftool[key.strip()] = value.strip()
+
+        return {"exiftool_hi": exiftool}
 
     return {
         "stat": _get_stat(),
