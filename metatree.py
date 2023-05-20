@@ -234,16 +234,28 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    # get the amount of folders in the input directory
-    # including the input directory itself too :)
-    num_folders = run_command(
-        ["find", input_path, "-type", "d", "-print", "|", "wc", "-l"]
-    ).get("stdout")
+    def _count_dirs() -> int:
+        """
+        Count the number of directories in the input directory.
+        """
+        num_dirs = 0
+        for _, dirs, _ in os.walk(input_path):
+            num_dirs += len(dirs)
 
-    # get the number of files in the input directory
-    num_files = run_command(
-        ["find", input_path, "-type", "f", "-print", "|", "wc", "-l"]
-    ).get("stdout")
+        return num_dirs + 1
+
+    def _count_files() -> int:
+        """
+        Count the number of files in the input directory.
+        """
+        num_files = 0
+        for _, _, files in os.walk(input_path):
+            num_files += len(files)
+
+        return num_files
+
+    num_folders = _count_dirs()
+    num_files = _count_files()
 
     # ignore type because we know it will be an int.
     num_folders = int(num_folders)  # type: ignore
