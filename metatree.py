@@ -18,6 +18,7 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
+import subprocess
 import time
 from argparse import Namespace
 
@@ -28,8 +29,16 @@ from argopt import argopt
 config_handler.set_global(length=79, spinner="classic", bar="classic")
 
 
-def run_command(command: str) -> str:
-    return os.popen(command).read()
+def run_command(cmd: list[str]) -> dict[str, str | int]:
+    cmd_out = subprocess.run(
+        cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+    )
+
+    return {
+        "stdout": cmd_out.stdout,
+        "stderr": cmd_out.stderr,
+        "returncode": cmd_out.returncode,
+    }
 
 
 def get_time() -> str:
@@ -71,10 +80,18 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
 
     # get the amount of folders in the input directory
     # including the input directory itself too :)
-    num_folders = int(run_command(f"find {input_path} -type d -print | wc -l"))
+    num_folders = run_command(
+        ["find", input_path, "-type", "d", "-print", "|", "wc", "-l"]
+    ).get("stdout")
 
     # get the number of files in the input directory
-    num_files = int(run_command(f"find {input_path} -type f -print | wc -l"))
+    num_files = run_command(
+        ["find", input_path, "-type", "f", "-print", "|", "wc", "-l"]
+    ).get("stdout")
+
+    # ignore type because we know it will be an int.
+    num_folders = int(num_folders)  # type: ignore
+    num_files = int(num_files)  # type: ignore
 
     # put the log file in the output Directory
     create_log_file(args, output_path, num_folders, num_files)
