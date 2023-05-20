@@ -276,7 +276,7 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
             parent_json_file = f"PARENT_{parent_dir_name}.json"
             parent_json_path = os.path.join(output_dir, parent_json_file)
 
-            # Put data in the .yml file
+            # Put data in the .json file
             with open(parent_json_path, "w") as f:
                 folder_data = get_file_info(parent_json_path)
                 json.dump(folder_data, f, indent=4)
