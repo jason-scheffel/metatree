@@ -287,7 +287,9 @@ def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
                 # Add .yml to the end of the file names
                 # and create empty files in the output directory
                 new_file_name = f"{file}.yml"
-                new_file_path = os.path.join(output_dir, new_file_name)
+                new_file_path = os.path.join(
+                    output_dir, new_file_name  # type: ignore
+                )
                 open(new_file_path, "w").close()
 
                 # Update the progress bar for files
