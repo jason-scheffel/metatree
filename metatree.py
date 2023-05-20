@@ -88,7 +88,7 @@ def create_log_file(
         log_file.write("#")
 
 
-def get_file_info(args: Namespace, file_name: str) -> dict:
+def get_file_info(file_name: str) -> dict:
     """
     Defining a file as a file or directory.
 
@@ -102,15 +102,92 @@ def get_file_info(args: Namespace, file_name: str) -> dict:
         """
         Get the information from the stat command.
         """
-        pass
+        format_options_file = {
+            "%a": "permission bits in octal (note '#' and '0' printf flags)",
+            "%A": "permission bits and file type in human readable form",
+            "%b": "number of blocks allocated (see %B)",
+            "%B": "the size in bytes of each block reported by %b",
+            "%C": "SELinux security context string",
+            "%d": "device number in decimal (st_dev)",
+            "%D": "device number in hex (st_dev)",
+            "%Hd": "major device number in decimal",
+            "%Ld": "minor device number in decimal",
+            "%f": "raw mode in hex",
+            "%F": "file type",
+            "%g": "group ID of owner",
+            "%G": "group name of owner",
+            "%h": "number of hard links",
+            "%i": "inode number",
+            "%m": "mount point",
+            "%n": "file name",
+            "%N": "quoted file name with dereference if symbolic link",
+            "%o": "optimal I/O transfer size hint",
+            "%s": "total size, in bytes",
+            "%r": "device type in decimal (st_rdev)",
+            "%R": "device type in hex (st_rdev)",
+            "%Hr": "major device type in decimal, for character/block device special files",  # noqa
+            "%Lr": "minor device type in decimal, for character/block device special files",  # noqa
+            "%t": "major device type in hex, for character/block device special files",  # noqa
+            "%T": "minor device type in hex, for character/block device special files",  # noqa
+            "%u": "user ID of owner",
+            "%U": "user name of owner",
+            "%w": "time of file birth, human-readable; - if unknown",
+            "%W": "time of file birth, seconds since Epoch; 0 if unknown",
+            "%x": "time of last access, human-readable",
+            "%X": "time of last access, seconds since Epoch",
+            "%y": "time of last data modification, human-readable",
+            "%Y": "time of last data modification, seconds since Epoch",
+            "%z": "time of last status change, human-readable",
+            "%Z": "time of last status change, seconds since Epoch",
+        }
+        format_options_fs = {
+            "%a": "free_blocks_available_to_non_superuser",
+            "%b": "total_data_blocks_in_file_system",
+            "%c": "total_file_nodes_in_file_system",
+            "%d": "free_file_nodes_in_file_system",
+            "%f": "free_blocks_in_file_system",
+            "%i": "file_system_ID_in_hex",
+            "%l": "maximum_length_of_filenames",
+            "%n": "file_name",
+            "%s": "block_size_for_faster_transfers",
+            "%S": "fundamental_block_size_for_block_counts",
+            "%t": "file_system_type_in_hex",
+            "%T": "file_system_type_in_human_readable_form",
+        }
+
+        cmd_file = [
+            "stat",
+            file_name,
+            "--format",
+            " ".join(format_options_file.keys()),
+        ]
+
+        cmd_fs = [
+            "stat",
+            file_name,
+            "--file-system",
+            "--format",
+            " ".join(format_options_fs.keys()),
+        ]
+
+        return {
+            "stat_file": run_command(cmd_file),
+            "stat_fs": run_command(cmd_fs),
+        }
 
     def _get_exiftool():
         """
         Get the information from the exiftool command.
         """
-        pass
+        cmd = ["exiftool", file_name]
+        return {
+            "exiftool": run_command(cmd),
+        }
 
-    return {}
+    return {
+        "stat": _get_stat(),
+        "exiftool": _get_exiftool(),
+    }
 
 
 def recreate_dir(args: Namespace, input_path: str, output_path: str) -> None:
