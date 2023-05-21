@@ -72,11 +72,11 @@ def create_log_file(
 
     Also contains information about the arguments used to run the program.
     """
-    log_file_name = f"metatree_log_{get_time()}.yml"
+    log_file_name = f"metatree_log_{other_stuff.get('Start Scrap Time')}.yml"
     log_file_path = os.path.join(save_path, log_file_name)
 
     with open(log_file_path, "w") as log_file:
-        log_file.write(f"Date: {get_time()}\n")
+        log_file.write(f"Date: {other_stuff.get('Start Scrap Time')}\n")
 
         log_file.write("\n")
 
