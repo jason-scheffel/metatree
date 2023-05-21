@@ -17,18 +17,22 @@ Python:
   SOURCE CODE = https://github.com/python/cpython
   LICENSE = https://github.com/python/cpython/blob/main/LICENSE
 
-alive-progress:
-  SOURCE CODE = https://github.com/rsalmei/alive-progress
-  LICENSE = https://spdx.org/licenses/MIT.html
-
 argopt:
   SOURCE CODE = https://github.com/casperdcl/argopt
   LICENSE = https://spdx.org/licenses/MPL-2.0.html
 
-about-time:
-  SOURCE CODE = https://github.com/rsalmei/about-time
+rich:
+  SOURCE CODE = https://github.com/Textualize/rich
   LICENSE = https://spdx.org/licenses/MIT.html
 
-grapheme:
-  SOURCE CODE = https://github.com/alvinlindstam/grapheme
+mdurl:
+  SOURCE CODE = https://github.com/markdown-it/mdurl
   LICENSE = https://spdx.org/licenses/MIT.html
+
+markdown-it-py:
+  SOURCE CODE = https://github.com/markdown-it/markdown-it
+  LICENSE = https://spdx.org/licenses/MIT.html
+
+Pygments:
+  SOURCE CODE = https://github.com/pygments/pygments
+  LICENSE = https://spdx.org/licenses/BSD-2-Clause.html

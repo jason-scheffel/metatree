@@ -96,16 +96,17 @@ This program requires, or optionally 'requires' the following software:
 
 <center>
 
-| Software           | License                               |
-| :----------------- | :------------------------------------ |
-| stat\*             | GPL-3.0-or-later                      |
-| exiftool\*         | GPL-1.0-or-later OR Artistic-1.0-Perl |
-| tar\*              | GPL-3.0-or-later                      |
-| Python\*           | 0BSD AND PSF-2.0                      |
-| alive-progress\*\* | MIT                                   |
-| argopt\*\*         | MPL-2.0                               |
-| about-time\*\*\*   | MIT                                   |
-| grapheme\*\*\*     | MIT                                   |
+| Software             | License                               |
+| :------------------- | :------------------------------------ |
+| stat\*               | GPL-3.0-or-later                      |
+| exiftool\*           | GPL-1.0-or-later OR Artistic-1.0-Perl |
+| tar\*                | GPL-3.0-or-later                      |
+| Python\*             | 0BSD AND PSF-2.0                      |
+| argopt\*\*           | MPL-2.0                               |
+| rich\*\*             | MIT                                   |
+| mdurl\*\*\*          | MIT                                   |
+| markdown-it-py\*\*\* | MIT                                   |
+| Pygments\*\*\*       | BSD-2-Clause                          |
 
 </center>
 
