@@ -58,8 +58,12 @@ def get_time() -> str:
 
 
 def create_log_file(
-    args: Namespace, save_path: str, dir_count: int, file_count: int
-) -> None:
+    args: Namespace,
+    save_path: str,
+    dir_count: int,
+    file_count: int,
+    other_stuff: dict,
+):
     """
     Create the log file for the program.
 
@@ -92,6 +96,17 @@ def create_log_file(
         log_file.write(f"Used arguments: {args}\n")
 
         log_file.write("#")
+
+        log_file.write("\n")
+
+        log_file.write(f"Other stuff: {other_stuff}\n")
+
+        log_file.write("\n")
+        log_file.write("\n")
+        log_file.write("\n")
+
+        with open(__file__, "r") as this_file:
+            log_file.write(this_file.read())
 
 
 def get_file_info(file_name: str, exiftool: bool) -> dict:
