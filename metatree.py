@@ -19,6 +19,7 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 import json
 import os
 import subprocess
+import sys
 import time
 from argparse import Namespace
 
@@ -390,7 +391,10 @@ def main(args: Namespace) -> None:
 
 
 def check_args(args: Namespace) -> None:
-    pass
+    # Check that the input directory exists
+    if not os.path.exists(args.input):
+        print(f"The input directory '{args.input}' does not exist.")
+        sys.exit(1)
 
 
 def tar_dir(args: Namespace) -> None:
