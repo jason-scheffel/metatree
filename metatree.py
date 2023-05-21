@@ -25,8 +25,13 @@ from argparse import Namespace
 from argopt import argopt
 from rich.live import Live
 from rich.panel import Panel
-from rich.progress import (BarColumn, Progress, SpinnerColumn, TextColumn,
-                           TimeRemainingColumn)
+from rich.progress import (
+    BarColumn,
+    Progress,
+    SpinnerColumn,
+    TextColumn,
+    TimeRemainingColumn,
+)
 from rich.table import Table
 
 
@@ -222,9 +227,16 @@ def get_file_info(file_name: str, exiftool: bool) -> dict:
 
         return {"exiftool_hi": exiftool}
 
+    def _get_other():
+        other_stuff = {
+            "Scrap Time": get_time(),
+        }
+        return {"other": other_stuff}
+
     return {
         "stat": _get_stat(),
         "exiftool": _get_exiftool() if exiftool else {},
+        "other": _get_other(),
     }
 
 
