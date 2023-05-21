@@ -387,6 +387,7 @@ def recreate_dir(args: Namespace) -> None:
 
 
 def main(args: Namespace) -> None:
+    check_args(args)
     recreate_dir(args)
 
 
