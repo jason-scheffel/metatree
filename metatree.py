@@ -25,13 +25,8 @@ from argparse import Namespace
 from argopt import argopt
 from rich.live import Live
 from rich.panel import Panel
-from rich.progress import (
-    BarColumn,
-    Progress,
-    SpinnerColumn,
-    TextColumn,
-    TimeRemainingColumn,
-)
+from rich.progress import (BarColumn, Progress, SpinnerColumn, TextColumn,
+                           TimeRemainingColumn)
 from rich.table import Table
 
 
