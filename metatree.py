@@ -99,7 +99,9 @@ def create_log_file(
 
         log_file.write("\n")
 
-        log_file.write(f"Other stuff: {other_stuff}\n")
+        log_file.write("Other stuff:\n")
+        log_file.write("\n")
+        log_file.write(json.dumps(other_stuff, indent=2))
 
         log_file.write("\n")
         log_file.write("\n")
@@ -259,6 +261,10 @@ def recreate_dir(args: Namespace) -> None:
     """
     Recreate the directory structure of the input directory in the output dir.
     """
+
+    start_time = get_time()
+    start_time_unix = time.time()
+
     input_path = args.input
     output_path = args.output
 
@@ -287,9 +293,6 @@ def recreate_dir(args: Namespace) -> None:
 
     num_folders = _count_dirs()
     num_files = _count_files()
-
-    # put the log file in the output Directory
-    create_log_file(args, output_path, num_folders, num_files)
 
     # bar stuff
     job_progress = Progress(
@@ -365,6 +368,21 @@ def recreate_dir(args: Namespace) -> None:
                 job_progress.update(job_file, advance=1)
                 completed = sum(task.completed for task in job_progress.tasks)
                 overall_progress.update(overall_task, completed=completed)
+
+    # put the log file in the output Directory
+
+    end_time = get_time()
+    end_time_unix = time.time()
+
+    other_info = {
+        "Start Scrap Time": start_time,
+        "Start Scrap Time Unix": start_time_unix,
+        "End Scrap Time": end_time,
+        "End Scrap Time Unix": end_time_unix,
+        "Elapsed Time (h)": (end_time_unix - start_time_unix) / 3600.0,
+    }
+
+    create_log_file(args, output_path, num_folders, num_files, other_info)
 
 
 def main(args: Namespace) -> None:
