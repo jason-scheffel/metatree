@@ -2,26 +2,27 @@ SPDXVersion: SPDX-2.1
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: metatree
-DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-db6c5f4b-9077-4cbe-86ec-4cfa2031b2e9
+DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-fd1e5cd1-73c9-4075-8402-5f3050721653
 Creator: Person: Anonymous ()
 Creator: Organization: Anonymous ()
 Creator: Tool: reuse-1.0.0
-Created: 2023-05-18T19:58:35Z
+Created: 2023-05-21T00:52:47Z
 CreatorComment: <text>This document was created automatically using available reuse information consistent with REUSE.</text>
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-51f2359e3befe05576f8a8d2f8d34b78
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-513206cae7b76065eb6e9760452381b6
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-bb8b7da611d3fd00a3b89c397c4095c1
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-b20c8c9a08044998c3302e26ef86158b
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-088e1a22fa95f68b522dd6aed3898127
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-6739a0eccb17ab8c84d1424a00c7fb91
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-c3df55ea73d681e6fe758b40ff562f6e
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-4ef36396b0c38baf2fb0ca1bae83b9bc
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-fae5c363e181f3b0e93eb0391b3cf00f
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-deb63b5573689a67ad426c5e9be7b2a3
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-9873729d2b16e28358417f683e35e490
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-26ea53ac59e2261f12f2b121bc29a445
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-227d72d2b881fd2e74ff782f62cb662a
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-e9588319df403c36f331a91c04ef47e5
 
 FileName: ./.IGNORE_THIS_FILE_REUSE_LICENSE_CHEAT.txt
-SPDXID: SPDXRef-51f2359e3befe05576f8a8d2f8d34b78
-FileChecksum: SHA1: 484cfdf99db008b5b495415568f200b4be042da2
+SPDXID: SPDXRef-4ef36396b0c38baf2fb0ca1bae83b9bc
+FileChecksum: SHA1: f9fd3e60af223ad1cf19c1162ded9d3f18644531
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: 0BSD
 LicenseInfoInFile: Artistic-1.0-Perl
+LicenseInfoInFile: BSD-2-Clause
 LicenseInfoInFile: CC0-1.0
 LicenseInfoInFile: GPL-1.0-or-later
 LicenseInfoInFile: GPL-3.0-or-later
@@ -31,45 +32,45 @@ LicenseInfoInFile: PSF-2.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./.gitignore
-SPDXID: SPDXRef-513206cae7b76065eb6e9760452381b6
-FileChecksum: SHA1: 7c939065766a604c4ef7831775413fa329dbae86
+SPDXID: SPDXRef-fae5c363e181f3b0e93eb0391b3cf00f
+FileChecksum: SHA1: 65f00364de7c938193665f6824e0abe10a2b5061
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./README.md
-SPDXID: SPDXRef-bb8b7da611d3fd00a3b89c397c4095c1
-FileChecksum: SHA1: cfe6a677dd091055da4642ff954bdfa0824e05dc
+SPDXID: SPDXRef-deb63b5573689a67ad426c5e9be7b2a3
+FileChecksum: SHA1: 18f73578c5c8f099758989cb697e7d95c165f6d9
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
 SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./depend-info.txt
-SPDXID: SPDXRef-b20c8c9a08044998c3302e26ef86158b
-FileChecksum: SHA1: 9cd5cce8c79a959b9de6b26154a12c2849a483fb
+SPDXID: SPDXRef-9873729d2b16e28358417f683e35e490
+FileChecksum: SHA1: 8f46923eb0227a82f2601b55f7cf08a34a69967d
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./metatree.py
-SPDXID: SPDXRef-088e1a22fa95f68b522dd6aed3898127
-FileChecksum: SHA1: 2bf59190299341a8341f766ef4474e1a8ee4a855
+SPDXID: SPDXRef-26ea53ac59e2261f12f2b121bc29a445
+FileChecksum: SHA1: 444dd41381c4bace0f793a935e98d97b7991d1f3
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
 SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./poetry.lock
-SPDXID: SPDXRef-6739a0eccb17ab8c84d1424a00c7fb91
-FileChecksum: SHA1: 42f88086770623e1f6216c5ab4fc93868f58ae37
+SPDXID: SPDXRef-227d72d2b881fd2e74ff782f62cb662a
+FileChecksum: SHA1: c59b1e370b7832e2af70c02038eb5186028ae0f6
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./pyproject.toml
-SPDXID: SPDXRef-c3df55ea73d681e6fe758b40ff562f6e
-FileChecksum: SHA1: f56422e092f484c6091c5d6d028ecedaa38092a3
+SPDXID: SPDXRef-e9588319df403c36f331a91c04ef47e5
+FileChecksum: SHA1: 2f7203137dd0a3a868cf5727c28c62c5576351e9
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
