@@ -29,18 +29,14 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 
 <!-- PROJECT LOGO -->
 
-If this message is here, then that means this program probably does not work
-right now.
-
 <h3 align="center">
 metatree
 </h3>
 
 metatree is a Python program that allows the user to recursively scrap metadata
-from files and directories within a specified directory. The user is allowed to
-specific patterns in which should be used to ignore certain files or
-directories. It is not intended to follow the "suckless" philosophy of minimal
-software. It is not intended to be an actually "good" program.
+from files and directories within a specified directory. It is not intended to
+follow the "suckless" philosophy of minimal software. It is not intended to be
+an actually "good" program.
 
 <!-- TABLE OF CONTENTS -->
 
