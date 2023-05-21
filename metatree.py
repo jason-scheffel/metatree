@@ -326,7 +326,7 @@ def recreate_dir(args: Namespace) -> None:
             # Put data in the .json file
             with open(parent_json_path, "w") as f:
                 folder_data = get_file_info(root, False)
-                json.dump(folder_data, f, indent=4)
+                json.dump(folder_data, f, indent=2)
 
             # Update the folder bar
             job_progress.update(job_folder, advance=1)
@@ -344,7 +344,7 @@ def recreate_dir(args: Namespace) -> None:
                 # Put data in the .json file
                 with open(file_json_path, "w") as f:
                     file_data = get_file_info(file_path, True)
-                    json.dump(file_data, f, indent=4)
+                    json.dump(file_data, f, indent=2)
 
                 # Update the file bar
                 job_progress.update(job_file, advance=1)
