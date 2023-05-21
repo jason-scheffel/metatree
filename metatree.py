@@ -263,14 +263,24 @@ def recreate_dir(args: Namespace) -> None:
     Recreate the directory structure of the input directory in the output dir.
     """
 
+    # create time stuff
     start_time = get_time()
     start_time_unix = time.time()
 
+    # instantiate the input and output paths
     input_path = args.input
     output_path = args.output
 
+    # make dir name for saving stuff
+    dir_name = os.path.join(output_path, f"metatree_out_{start_time}")
+
     if not os.path.exists(output_path):
         os.makedirs(output_path)
+
+    # make dir_name
+    os.makedirs(dir_name)
+
+    output_path = f"{dir_name}{input_path}"
 
     def _count_dirs() -> int:
         """
