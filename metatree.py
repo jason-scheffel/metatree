@@ -375,8 +375,14 @@ def recreate_dir(args: Namespace) -> None:
 
                 # Put data in the .json file
                 with open(file_json_path, "w") as f:
-                    file_data = get_file_info(file_path, True)
-                    json.dump(file_data, f, indent=2)
+                    try:
+                        file_data = get_file_info(file_path, True)
+                        json.dump(file_data, f, indent=2)
+                    except Exception as e:
+                        json.dump({"error": str(e)}, f, indent=2)
+                        f.write("\n")
+                        file_data = get_file_info(file_path, False)
+                        json.dump(file_data, f, indent=2)
 
                 # Update the file bar
                 job_progress.update(job_file, advance=1)
