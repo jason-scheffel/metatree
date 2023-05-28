@@ -36,18 +36,21 @@ from rich.progress import (
 from rich.table import Table
 
 
-def run_command(cmd: list[str]) -> dict[str, str | int]:
+def run_command(cmd: list[str]):
     """
     Run a command the return the stdout, stderr, and returncode.
     """
-    cmd_out = subprocess.run(
+    cmd_out = subprocess.Popen(
         cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
     )
 
+    stdout, stderr = cmd_out.communicate()
+    return_code = cmd_out.poll()
+
     return {
-        "stdout": cmd_out.stdout,
-        "stderr": cmd_out.stderr,
-        "returncode": cmd_out.returncode,
+        "stdout": stdout,
+        "stderr": stderr,
+        "returncode": return_code,
     }
 
 
