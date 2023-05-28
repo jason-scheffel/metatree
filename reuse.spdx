@@ -2,17 +2,17 @@ SPDXVersion: SPDX-2.1
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: metatree
-DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-fd1e5cd1-73c9-4075-8402-5f3050721653
+DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-0bb1c2e9-32e6-466e-a869-8f501dc96e9e
 Creator: Person: Anonymous ()
 Creator: Organization: Anonymous ()
 Creator: Tool: reuse-1.0.0
-Created: 2023-05-21T00:52:47Z
+Created: 2023-05-28T03:33:53Z
 CreatorComment: <text>This document was created automatically using available reuse information consistent with REUSE.</text>
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-4ef36396b0c38baf2fb0ca1bae83b9bc
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-fae5c363e181f3b0e93eb0391b3cf00f
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-deb63b5573689a67ad426c5e9be7b2a3
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-ac224b9238bd23852a74a147e665845e
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-309ebe682980c8d460ef96c02fefeaa6
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-9873729d2b16e28358417f683e35e490
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-26ea53ac59e2261f12f2b121bc29a445
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-8927bd1f1a2edb88960030df7153d0ed
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-227d72d2b881fd2e74ff782f62cb662a
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-e9588319df403c36f331a91c04ef47e5
 
@@ -32,15 +32,15 @@ LicenseInfoInFile: PSF-2.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./.gitignore
-SPDXID: SPDXRef-fae5c363e181f3b0e93eb0391b3cf00f
-FileChecksum: SHA1: 65f00364de7c938193665f6824e0abe10a2b5061
+SPDXID: SPDXRef-ac224b9238bd23852a74a147e665845e
+FileChecksum: SHA1: 9d893ffbd2ec8bd2f6b171bec4935233c9859044
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./README.md
-SPDXID: SPDXRef-deb63b5573689a67ad426c5e9be7b2a3
-FileChecksum: SHA1: 18f73578c5c8f099758989cb697e7d95c165f6d9
+SPDXID: SPDXRef-309ebe682980c8d460ef96c02fefeaa6
+FileChecksum: SHA1: 66632b9ac6647b4ca8c8f9675474741a89a11e8a
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
@@ -54,8 +54,8 @@ LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./metatree.py
-SPDXID: SPDXRef-26ea53ac59e2261f12f2b121bc29a445
-FileChecksum: SHA1: 444dd41381c4bace0f793a935e98d97b7991d1f3
+SPDXID: SPDXRef-8927bd1f1a2edb88960030df7153d0ed
+FileChecksum: SHA1: df81b79a43eb3dd17626065f06be7ef196f2ed4b
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
