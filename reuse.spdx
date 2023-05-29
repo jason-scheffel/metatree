@@ -2,17 +2,17 @@ SPDXVersion: SPDX-2.1
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: metatree
-DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-0bb1c2e9-32e6-466e-a869-8f501dc96e9e
+DocumentNamespace: http://spdx.org/spdxdocs/spdx-v2.1-d12ee372-0473-4de3-9412-8d207720d94b
 Creator: Person: Anonymous ()
 Creator: Organization: Anonymous ()
 Creator: Tool: reuse-1.0.0
-Created: 2023-05-28T03:33:53Z
+Created: 2023-05-29T00:04:35Z
 CreatorComment: <text>This document was created automatically using available reuse information consistent with REUSE.</text>
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-4ef36396b0c38baf2fb0ca1bae83b9bc
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-ac224b9238bd23852a74a147e665845e
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-309ebe682980c8d460ef96c02fefeaa6
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-9873729d2b16e28358417f683e35e490
-Relationship: SPDXRef-DOCUMENT describes SPDXRef-8927bd1f1a2edb88960030df7153d0ed
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-756dc3a69baced9a138d3cd2a3cae09d
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-227d72d2b881fd2e74ff782f62cb662a
 Relationship: SPDXRef-DOCUMENT describes SPDXRef-e9588319df403c36f331a91c04ef47e5
 
@@ -54,8 +54,8 @@ LicenseInfoInFile: CC0-1.0
 FileCopyrightText: <text>SPDX-FileCopyrightText: 2023 Jason Scheffel <contact@jasonscheffel.com></text>
 
 FileName: ./metatree.py
-SPDXID: SPDXRef-8927bd1f1a2edb88960030df7153d0ed
-FileChecksum: SHA1: df81b79a43eb3dd17626065f06be7ef196f2ed4b
+SPDXID: SPDXRef-756dc3a69baced9a138d3cd2a3cae09d
+FileChecksum: SHA1: 085f770327b56a2381e1af9135699855d0b93e5e
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: AGPL-3.0-or-later
 FileCopyrightText: <text>Copyright (C) 2023 Jason Scheffel
