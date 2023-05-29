@@ -38,6 +38,12 @@ from files and directories within a specified directory. It is not intended to
 follow the "suckless" philosophy of minimal software. It is not intended to be
 an actually "good" program.
 
+As of right now, metatree should, as far as I know, work. It is, however, very
+very slow.
+
+I have not thoroughly tested this program. You should probably read the source
+code yourself.
+
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
